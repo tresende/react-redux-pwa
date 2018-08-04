@@ -1,0 +1,28 @@
+.chat {
+  background: #fdfdfd;
+}
+.chat-title {
+  background: #0792BC;
+  color: #fff;
+}
+.messages .message.message-personal {
+  color: #fff;
+  background: #0792BC;
+}
+.messages .message.message-personal::before {
+  border-top: 4px solid #0792BC;
+}
+.message-box .message-submit {
+  color: #fff;
+  background: #0792BC;
+}
+.message-box .message-submit:hover {
+  background: #06789A;
+}
+#closebutton {
+  background-color: #0792BC;
+  color: white;
+}
+#btnchat {
+  background: #0792BC;
+}
