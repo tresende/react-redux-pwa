@@ -4,7 +4,7 @@ import CountApi from '../services/CountApi';
 import Button from '@material-ui/core/Button';
 import '../assets/css/layout.css'
 
-export class Home extends Component {
+export class Item extends Component {
 
 
     add() {
@@ -19,7 +19,7 @@ export class Home extends Component {
         return (
             <div>
                 <div className='content'>
-                    abcd
+                    sadlfhdskjl
                     <Button onClick={this.remove.bind(this)} variant="contained" color="primary">-</Button>
                     {this.props.size}
                     <Button onClick={this.add.bind(this)} variant="contained" color="primary">+</Button>
@@ -45,5 +45,5 @@ const mapDispatchToProps = dispatch => {
         },
     }
 }
-const MessageConatiner = connect(mapStateToProps, mapDispatchToProps)(Home);
+const MessageConatiner = connect(mapStateToProps, mapDispatchToProps)(Item);
 export default MessageConatiner;

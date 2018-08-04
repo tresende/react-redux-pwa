@@ -30,6 +30,7 @@ ReactDOM.render(
       <Router history={browserHistory}>
         <Route path="/" component={Login} />
         <Route path="/home" component={App} onEnter={checkAuth} />
+        <Route path="/item" component={App} onEnter={checkAuth} />
         <Route path="/logout" component={Logout} />
       </Router>
     </Provider>
