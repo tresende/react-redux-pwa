@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import CountApi from '../services/CountApi';
+import Button from '@material-ui/core/Button';
+
 
 export class Home extends Component {
     add() {
@@ -14,9 +16,13 @@ export class Home extends Component {
     render() {
         return (
             <div>
-                <button onClick={this.remove.bind(this)}> - </button>
+                <Button onClick={this.remove.bind(this)} variant="contained" color="primary">
+                    -
+                </Button>
                 {this.props.size}
-                <button onClick={this.add.bind(this)}> + </button>
+                <Button onClick={this.add.bind(this)} variant="contained" color="primary">
+                    +
+                </Button>
             </div>
         );
     }
