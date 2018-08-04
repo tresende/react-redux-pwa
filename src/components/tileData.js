@@ -24,7 +24,7 @@ export const mailFolderListItems = (
       <ListItemIcon>
         <StarIcon />
       </ListItemIcon>
-      <ListItemText primary="Starred" />
+      <ListItemText onClick={() => { window.location.href = '/item' }} primary="Starred" />
     </ListItem>
     <ListItem button>
       <ListItemIcon>
