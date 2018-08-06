@@ -37,3 +37,25 @@ export const askForPermissioToReceiveNotifications = async () => {
     subscribeTokenToTopic(token, 'all');
     return token;
 }
+/* 
+
+
+
+header 
+key=AAAAfxvGuZY:APA91bGNG5hJ_i9JmucPezuh5mn6KyjWebIYKB218bMTH3UUv0T8zvXVF-sL5sVEsmuAsIVCm2JHmNF86WSxQJmEMr69LKsId8giJE5bABd_XNnrzwvVCjEgk_W9MNelLctbLsMMEYPDT3qkoIpEEewXKWYw5073hA
+content  =application/json
+
+body
+
+
+{
+    "notification": {
+        "title": "dsfasd",
+        "body": "sadasd",
+        "click_action": "http://localhost:3000/",
+        "icon": "http://cdn.sstatic.net/stackexchange/img/logos/so/so-icon.png"
+    },
+    "to": "/topics/all"
+}
+
+*/
