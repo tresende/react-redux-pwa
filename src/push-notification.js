@@ -4,6 +4,7 @@ require("firebase/messaging");
 const messagingSenderId = '545926855062'
     , key = 'AIzaSyBr0Z2gOJh0XajxLDqmoQtziJ61MXjyaDA';
 
+//backend task    
 function subscribeTokenToTopic(token, topic) {
     fetch('https://iid.googleapis.com/iid/v1/' + token + '/rel/topics/' + topic, {
         method: 'POST',
