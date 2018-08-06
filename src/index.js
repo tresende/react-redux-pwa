@@ -6,7 +6,7 @@ import { Router, Route, browserHistory } from 'react-router'
 import thunkMiddleware from 'redux-thunk';
 
 import registerServiceWorker from './registerServiceWorker';
-
+import { initializeFirebase } from './push-notification';
 import App from './App';
 
 import Login from './components/Login';
@@ -38,3 +38,4 @@ ReactDOM.render(
   );
 
 registerServiceWorker();
+initializeFirebase(); 
