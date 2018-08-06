@@ -19,15 +19,15 @@ export const initializeFirebase = () => {
     firebase.initializeApp({
         messagingSenderId: messagingSenderId
     });
-    const messaging = firebase.messaging();
-    messaging.onMessage(function (payload) {
-        //console.log( payload.notification.icon);
-        var options = {
-            body: payload.notification.body,
-            icon: payload.notification.icon,
-        };
-        new Notification(payload.notification.title, options);
-    });
+    // const messaging = firebase.messaging();
+    // messaging.onMessage(function (payload) {
+    //     //console.log( payload.notification.icon);
+    //     var options = {
+    //         body: payload.notification.body,
+    //         icon: payload.notification.icon,
+    //     };
+    //     new Notification(payload.notification.title, options);
+    // });
     askForPermissioToReceiveNotifications();
 }
 

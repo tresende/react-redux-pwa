@@ -15,18 +15,20 @@ import Logout from './components/Logout';
 import { countReducer } from './reducers/countReducer'
 
 
-const reducers = combineReducers({  countReducer });
+const reducers = combineReducers({ countReducer });
 const store = createStore(reducers, applyMiddleware(thunkMiddleware));
 
 function checkAuth(nextState, replace) {
+  Notification.requestPermission();
+
   if (localStorage.getItem('auth-token') === null) {
     replace('/?msg=você precisa estar logado para acessar o endereço');
   }
 }
 
 ReactDOM.render(
-    (
-      <Provider store={store}>
+  (
+    <Provider store={store}>
       <Router history={browserHistory}>
         <Route path="/" component={Login} />
         <Route path="/home" component={App} onEnter={checkAuth} />
@@ -34,8 +36,9 @@ ReactDOM.render(
         <Route path="/logout" component={Logout} />
       </Router>
     </Provider>
-    ), document.getElementById('root')
-  );
+  ), document.getElementById('root')
+);
 
 registerServiceWorker();
+Notification.requestPermission();
 initializeFirebase(); 
